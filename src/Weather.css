@@ -1,3 +1,18 @@
-.Weather {
-    border: 1px solid #222831;
+.WeatherDetails {
+    text-align: center;
+    padding: 40px 0;
+}
+.btn {
+    background: #00adb5 !important;
+}
+.data {
+    display:flex;
+    justify-content: space-around;
+}
+
+li {
+    list-style: none;
+}
+p {
+    font-size: 48px;
 }

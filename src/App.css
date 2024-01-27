@@ -1,9 +1,14 @@
 .App {
-    padding-top: 60px;
+    border-radius: 30px;
+    box-shadow: 0 10px 30px #535151;
+    margin: 18px auto;
+    max-width: 720px;
+    padding: 30px 40px;
 }
 
 footer {
     font-family: monospace;
+    font-size: 15px;
 }
 footer a {
     text-decoration: none;
