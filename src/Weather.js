@@ -13,18 +13,16 @@ export default function Weather(){
           </div>
         </div>
       </form>
-      <div className="WeatherDetails">
+      <div>
         <h1>San Martín de los Andes</h1>
         <h3>Saturday 17:20</h3>
-        <div className="Data">
+        <div className="CurrentWeather">
           <div class="Description"><div class="Icon"><img src="https://ssl.gstatic.com/onebox/weather/64/sunny.png" alt="sunny"></img></div><span>Sunny</span></div>
           <div class="Temperature"><span class="TemperatureValue">26</span><span class="Unit">°C |</span><span class="Unit">°F</span></div>
-          <div>
-            <ul>
-              <li>Precipitation 0%</li>
-              <li>Humidity 20%</li>
-              <li>Wind 11 Km/h</li>
-            </ul>
+          <div className="WeatherDetails">
+            <div className="Precipitation"><span>Precipitation 0%</span></div>
+            <div className="Humidity"><span>Humidity 20%</span></div>
+            <div className="Wind"><span>Wind 11 Km/h</span></div>                      
           </div>
         </div>
       </div>

@@ -1,13 +1,26 @@
+h1,
+h3 {
+  text-align: center;
+}
+
+h1 {
+  font-size: 42px;
+  font-weight: 500;
+  margin: 0;
+  padding: 30px 0 0;
+}
+
+h3 {
+  font-weight: 400;
+  margin: 12px;
+  padding: 12px 0;
+}
+
 .WeatherDetails {
-    text-align: center;
     padding: 40px 0;
 }
 .btn {
     background: #00adb5 !important;
-}
-.data {
-    display:flex;
-    justify-content: space-around;
 }
 
 li {
@@ -16,3 +29,41 @@ li {
 p {
     font-size: 48px;
 }
+
+
+.CurrentWeather {
+    display: flex;
+    justify-content: space-around;
+  }
+  
+  .Description {
+    font-weight: 300;
+    text-align: center;
+    max-width: 100px;
+    padding: 20px 0;
+  }
+  
+  .Temperature {
+    padding: 60px 0;
+    display: flex;
+  }
+  
+  .TemperatureValue {
+    font-size: 60px;
+    font-weight: 500;
+  }
+  
+  .Unit {
+    font-size: 24px;
+    margin-top: 6px;
+  }
+  
+  .WeatherDetails {
+    padding-top: 36px;
+  }
+
+  .Precipitation,
+  .Humidity,
+  .Wind {
+    padding-bottom: 18px;
+  }
