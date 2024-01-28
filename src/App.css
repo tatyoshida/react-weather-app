@@ -4,11 +4,13 @@
     margin: 18px auto;
     max-width: 720px;
     padding: 30px 40px;
+    font-family: 'Raleway', sans-serif;
 }
 
 footer {
-    font-family: monospace;
-    font-size: 15px;
+    font-family: 'Sono', monospace;
+    font-size: 12px;
+    text-align: center;
 }
 footer a {
     text-decoration: none;
