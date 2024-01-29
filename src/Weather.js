@@ -12,7 +12,7 @@ export default function Weather(props){
       city: response.data.name,
       date: new Date(response.data.dt *1000),
       temperature: response.data.main.temp,
-      iconUrl: "https://ssl.gstatic.com/onebox/weather/64/sunny.png",
+      iconUrl: `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`,
       description: response.data.weather[0].description,
       pressure: response.data.main.pressure,
       humidity: response.data.main.humidity,
@@ -38,7 +38,7 @@ export default function Weather(props){
   if (weatherData.ready) {
     return (
       <div className="Weather">
-        <form onSubmit={handleSubmit}>
+        <form onSubmit={handleSubmite}>
           <div className="input-group mb-3">
             <input type="text" className="form-control" placeholder="Enter a city..." onChange={handleCityChange}/>
             <button type="button" className="btn" id="button">Search</button>
