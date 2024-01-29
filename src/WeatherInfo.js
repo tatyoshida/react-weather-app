@@ -1,4 +1,5 @@
 import FormattedDate from "./FormattedDate";
+import TemperatureValue from "./TemperatureValue";
 
 export default function WeatherInfo(props){
     return (
@@ -16,10 +17,7 @@ export default function WeatherInfo(props){
                 <span className="text-capitalize">{props.data.description}</span>
               </div>
               <div className="col-6 Temperature">
-                <span className="TemperatureValue">{Math.round(props.data.temperature)}</span>
-                <span className="Unit">°C</span>
-                <span className="Unit">|</span>
-                <span className="Unit">°F</span>
+                <TemperatureValue celsius= {props.data.temperature} />
               </div>
             </div>  
             <div className="row WeatherDetails">

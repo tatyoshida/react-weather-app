@@ -55,11 +55,15 @@ p {
   }
   
   .Unit {
-    margin-top: 6px;
-    padding-top: 18px;
+    float: right;
+    padding-top: 20px;
     letter-spacing: 0.3em;
     font-size: 20px;
-    padding-left: 6px;
+    padding-left: 10px;
+  }
+
+  .Unit a {
+    text-decoration: none;
   }
   
   .WeatherDetails {
