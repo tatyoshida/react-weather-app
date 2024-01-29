@@ -12,7 +12,7 @@
 
 .Weather h3 {
   font-weight: 400;
-  margin: 12px;
+  font-size: 22px;
   padding: 12px 0;
 }
 
@@ -32,22 +32,21 @@ p {
 
 
 .CurrentWeather {
-    display: flex;
-    justify-content: space-around;
     font-family: 'Poiret One', sans-serif;
+    
   }
   
   .Description {
     font-weight: 500;
     letter-spacing: 0.1em;
     text-align: center;
-    max-width: 100px;
     padding: 20px 0;
   }
   
   .Temperature {
-    padding: 20px 0 60px;
+    padding: 20px 0;
     display: flex;
+    justify-content: center;
   }
   
   .TemperatureValue {
@@ -66,9 +65,10 @@ p {
     padding-top: 20px;
     letter-spacing: 0.1em;
     font-size: 14px;
+    text-align: center;
   }
 
-  .UV,
+  .Pressure,
   .Humidity,
   .Wind {
     padding-bottom: 18px;

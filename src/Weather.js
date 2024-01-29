@@ -1,15 +1,15 @@
 import React, {useState} from "react";
 import axios from "axios";
+import FormattedDate from "./FormattedDate";
 import "./Weather.css";
 
 export default function Weather(props){
   const [weatherData, setweatherData] = useState({ready:false});
   function handleResponse(response) {
-    console.log(response.data);
     setweatherData({
       ready: true,
       city: response.data.name,
-      date: "Sunday 19:05",
+      date: new Date(response.data.dt *1000),
       temperature: response.data.main.temp,
       iconUrl: "https://ssl.gstatic.com/onebox/weather/64/sunny.png",
       description: response.data.weather[0].description,
@@ -30,25 +30,29 @@ export default function Weather(props){
         </form>
         <div>
           <h1>{weatherData.city}</h1>
-          <h3>{weatherData.date}</h3>
+          <h3>
+            <FormattedDate date = {weatherData.date} />
+          </h3>
           <div className="CurrentWeather">
-            <div className="Description">
-              <div className="Icon">
-                <img src={weatherData.iconUrl} alt={weatherData.description}></img>
+            <div className="row">
+              <div className="col-6 Description">
+                <div className="Icon">
+                  <img src={weatherData.iconUrl} alt={weatherData.description}></img>
+                </div>
+                <span className="text-capitalize">{weatherData.description}</span>
               </div>
-              <span>{weatherData.description}</span>
-            </div>
-            <div className="Temperature">
-              <span className="TemperatureValue">{Math.round(weatherData.temperature)}</span>
-              <span className="Unit">°C</span>
-              <span className="Unit">|</span>
-              <span className="Unit">°F</span>
-            </div>
-            <div className="WeatherDetails">
-              <div className="Pressure"><span>Pressure: {weatherData.pressure} mb</span></div>
-              <div className="Humidity"><span>Humidity: {weatherData.humidity}%</span></div>
-              <div className="Wind"><span>Wind: {Math.round(weatherData.wind)} Km/h</span></div>                      
-            </div>
+              <div className="col-6 Temperature">
+                <span className="TemperatureValue">{Math.round(weatherData.temperature)}</span>
+                <span className="Unit">°C</span>
+                <span className="Unit">|</span>
+                <span className="Unit">°F</span>
+              </div>
+            </div>  
+            <div className="row WeatherDetails">
+              <div className="col-4 Pressure"><span>Pressure: {weatherData.pressure} mb</span></div>
+              <div className="col-4 Humidity"><span>Humidity: {weatherData.humidity}%</span></div>
+              <div className="col-4 Wind"><span>Wind: {Math.round(weatherData.wind)} Km/h</span></div>                      
+            </div>  
           </div>
         </div>
       </div>
