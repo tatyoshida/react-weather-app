@@ -1,5 +1,5 @@
 export default function FormattedDate(props){
-    let days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]
+    let days = ["Domingo", "Lunes", "Martes", "Miércoles", "Jueves", "Viernes", "Sábado"]
     let day = days[props.date.getDay()];
     let hours = props.date.getHours();
     if (hours < 10) {

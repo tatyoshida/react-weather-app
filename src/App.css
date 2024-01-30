@@ -11,6 +11,7 @@ footer {
     font-family: 'Sono', monospace;
     font-size: 12px;
     text-align: center;
+    margin-top: 40px ;
 }
 footer a {
     text-decoration: none;

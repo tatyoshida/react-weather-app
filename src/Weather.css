@@ -16,65 +16,54 @@
   padding: 12px 0;
 }
 
-.WeatherDetails {
-    padding: 40px 0;
-}
 .btn {
-    background: #00adb5 !important;
+  background: #00adb5 !important;
 }
-
-li {
-    list-style: none;
-}
-p {
-    font-size: 48px;
-}
-
 
 .CurrentWeather {
-    font-family: 'Poiret One', sans-serif;
-    
-  }
-  
-  .Description {
-    font-weight: 500;
-    letter-spacing: 0.1em;
-    text-align: center;
-    padding: 20px 0;
-  }
-  
-  .Temperature {
-    padding: 20px 0;
-    display: flex;
-    justify-content: center;
-  }
-  
-  .TemperatureValue {
-    font-size: 80px;
-    font-weight: 500;
-  }
-  
-  .Unit {
-    float: right;
-    padding-top: 20px;
-    letter-spacing: 0.3em;
-    font-size: 20px;
-    padding-left: 10px;
-  }
+  font-family: 'Poiret One', sans-serif;
+}
 
-  .Unit a {
-    text-decoration: none;
+.Description {
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-align: center;
+  padding: 0 0 20px;
   }
   
-  .WeatherDetails {
-    padding-top: 20px;
-    letter-spacing: 0.1em;
-    font-size: 14px;
-    text-align: center;
-  }
+.Temperature {
+  padding: 0 0 20px;
+  display: flex;
+  justify-content: center;
+}
+  
+.TemperatureValue {
+  font-size: 80px;
+  font-weight: 500;
+}
+  
+.Unit {
+  float: right;
+  padding-top: 20px;
+  letter-spacing: 0.3em;
+  font-size: 20px;
+  padding-left: 10px;
+}
 
-  .Pressure,
-  .Humidity,
-  .Wind {
-    padding-bottom: 18px;
-  }
+.Unit a {
+  text-decoration: none;
+  color:#56a2a7;
+}
+  
+.WeatherDetails {
+  padding: 20px 0;
+  letter-spacing: 0.1em;
+  font-size: 14px;
+  text-align: center;
+}
+
+.Pressure,
+.Humidity,
+.Wind {
+  padding-bottom: 18px;
+}
