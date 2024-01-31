@@ -41,7 +41,7 @@ export default function Weather(props){
         <form onSubmit={handleSubmite}>
           <div className="input-group mb-3">
             <input type="text" className="form-control" placeholder="El tiempo en..." onChange={handleCityChange}/>
-            <button type="button" className="btn" id="button">Buscar</button>
+            <button type="submite" className="btn" id="button">Buscar</button>
           </div>
         </form>
         <WeatherInfo data={weatherData}/>
