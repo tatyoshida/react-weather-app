@@ -27,7 +27,7 @@ export default function TemperatureValue(props) {
       return (
         <div className="TemperatureValue">
           <span className="TempertureValue">{Math.round((fahrenheit()))}</span>
-          <span className="Unit"><a href="/" onClick={showCelsius}>°C</a> °F</span>
+          <span className="Unit"><a href="/" onClick={showCelsius}>°C</a> | °F</span>
         </div>
       );
     }

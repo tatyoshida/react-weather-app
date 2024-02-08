@@ -1,32 +1,41 @@
-import WeatherIcon from "./WeatherIcon";
+import React, {useState} from "react";
+import ForecastDay from "./ForecastDay";
 import "./ForecastInfo.css";
 import axios from "axios";
 
 export default function ForecastInfo(props){
+  let [loaded, setLoaded] = useState(false);
+  let [forecast, setForecast] = useState(null);
+
   function handleResponse(response) {
-    console.log(response.data);
+    setForecast(response.data.daily);
+    setLoaded(true);
   }
 
-  let apiKey = "9763745d679c919242f6130874d0e778"
-  let latitude = props.coordinates.lat;
-  let longitude = props.coordinates.lon;
-  let apiUrl = `https://api.openweathermap.org/data/2.5/forecast?lat=${latitude}&lon=${longitude}&appid=${apiKey}&lang=es&units=metric`;
-  
-  axios.get(apiUrl).then(handleResponse);
-  return (
-    <div className="ForecastInfo">
-      <div className="row">
-        <div className="col">
-          <div className="ForecastDay">Jue</div>
-          <div>
-            <WeatherIcon code="01d" size={40}/>
-          </div>
-          <div className="WeatherForecast-temp">
-            <span className="Temp-max">38°</span>
-            <span className="Temp-min">26°</span>
-          </div>
+  if (loaded) {
+    return (
+      <div className="ForecastInfo">
+        <div className="row">
+          {forecast.map( function (dailyForecast, index) {
+            if (index < 5) {
+              return (
+                <div className="col-sm mb-3" key={index}>
+                  <ForecastDay data={dailyForecast}/>
+                </div>
+              );
+            }           
+          })}
         </div>
       </div>
-    </div>
-  )
+    );
+  } else {
+    let apiKey = "7ed26a6948c661d05fafe7355b41b2ec"
+    let latitude = props.coordinates.lat;
+    let longitude = props.coordinates.lon;
+    let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${latitude}&lon=${longitude}&appid=${apiKey}&lang=es&units=metric`;
+    
+    axios.get(apiUrl).then(handleResponse);
+    
+    return null;    
+  }
 }
